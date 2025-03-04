@@ -12,8 +12,7 @@ const {
   ELEVENLABS_AGENT_ID,
   TWILIO_ACCOUNT_SID,
   TWILIO_AUTH_TOKEN,
-  TWILIO_PHONE_NUMBER,
-  PORT
+  TWILIO_PHONE_NUMBER
 } = process.env;
 
 // Check for the required environment variables
