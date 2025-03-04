@@ -13,6 +13,7 @@ const {
   TWILIO_ACCOUNT_SID,
   TWILIO_AUTH_TOKEN,
   TWILIO_PHONE_NUMBER,
+  PORT
 } = process.env;
 
 // Check for the required environment variables
