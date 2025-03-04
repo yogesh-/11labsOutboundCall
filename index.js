@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 8000;
 
 // Root route for health check
 fastify.get("/", async (_, reply) => {
-  reply.send({ message: `Server is running on ${PORT} });
+  reply.send({ message: `Server is running on ${PORT}` });
 });
 
 // Route to handle incoming calls from Twilio
