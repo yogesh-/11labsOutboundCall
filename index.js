@@ -29,7 +29,7 @@ fastify.register(fastifyWs);
 // Initialize Twilio client
 const twilioClient = Twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
-const PORT = process.env.PORT || 8000;
+const PORT = Number(process.env.PORT) || 8000;
 
 // Root route for health check
 fastify.get("/", async (_, reply) => {
@@ -177,7 +177,7 @@ fastify.post("/make-outbound-call", async (request, reply) => {
 });
 
 // Start the Fastify server
-fastify.listen({ port: PORT }, (err) => {
+fastify.listen({ port: PORT,host: '0.0.0.0' }, (err) => {
   if (err) {
     console.error("Error starting server:", err);
     process.exit(1);
